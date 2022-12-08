@@ -1,2 +1,13 @@
-<h1>Lists#new</h1>
-<p>Find me in app/views/lists/new.html.erb</p>
+<div class="container__box New-list__box">
+
+    <div class="container__box--fond">
+        <div class="New-list__box--form">
+            <h2>Create a new list</h2>
+            <%= simple_form_for(@list) do |f| %>
+                <%= f.input :name %>
+
+                <%= f.submit class: "container__box--btn" %>
+            <% end %>
+        </div>
+    </div>
+</div>

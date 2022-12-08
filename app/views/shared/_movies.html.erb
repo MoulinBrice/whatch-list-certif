@@ -1,0 +1,22 @@
+<div class="movies__box">
+    <div class="movies__box--head">
+        <h5>Add a movie to Your List</h5>
+        <button type="button" class="movies__box__head--btn-close">X</button>
+    </div>
+    <hr>
+    <div class="movies__box--form">
+        <%= simple_form_for(@list) do |f| %>
+            <p>Movie <sup>*</sup></p>
+            <%= f.input :title, collection: "test"%>
+            <%= f.input :address %>
+            <%= f.input :rating %>
+            <%= f.submit %>
+        <% end %>
+    </div>
+
+</div>
+
+
+
+
+

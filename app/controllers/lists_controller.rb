@@ -8,8 +8,7 @@ class ListsController < ApplicationController
   def create
     @list = List.new(list_params)
     @list.save
-    # No need for app/views/restaurants/create.html.erb
-    redirect_to lists_path #à verifier
+    redirect_to list_path(@list) #à verifier
   end
 
   def new
@@ -18,11 +17,14 @@ class ListsController < ApplicationController
 
 
   def show
-    @list = List.find(set_list)
+    @list
+    @movie = Movie.new
+
   end
 
   def destroy
     @list.destroy
+    redirect_to root_path
   end
 
   private

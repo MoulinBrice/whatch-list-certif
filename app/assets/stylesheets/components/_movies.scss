@@ -1,0 +1,13 @@
+.movies__box{
+    width: 550px;
+    height: 400px;
+    background-color: white;
+}
+.movies__box--head{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.movies__box hr{
+    margin-top: -4px;
+}

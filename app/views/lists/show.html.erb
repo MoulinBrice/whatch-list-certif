@@ -1,0 +1,14 @@
+<div class="banner__list_box">
+    <h1><%= @list.name  %></h1>
+</div>
+
+<div class="container__box">
+    <div class="list__box--btn">
+        <%= link_to "Add a new movie", root_path, class:"container__box--btn" %>
+        <%= button_to "Delete this list", { :action => "destroy" }, :method => :delete, class: "container__box--btn-delete" %>
+    </div>
+
+    <div class="list__box--movie">
+        <%= render "shared/movies" %>
+    </div>
+</div>
